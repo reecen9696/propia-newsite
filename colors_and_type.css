@@ -1,0 +1,224 @@
+/* ============================================================
+   Propia Design System — Colors & Typography
+   Pulled from src/index.css (Tailwind v4 @theme) in reecen9696/propia
+   ============================================================ */
+
+/* ── Font Faces ── */
+@font-face {
+  font-family: "Geist";
+  src: url("fonts/Geist-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geist Mono";
+  src: url("fonts/GeistMono-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "cooperLtBT";
+  src: url("fonts/cooperLtBT-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "cooperLtBT";
+  src: url("fonts/cooperLtBT-italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Datatype";
+  src: url("fonts/Datatype-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ── Brand Colors (from @theme) ── */
+  --color-brand-orange: #D97757;   /* accent orange — used on "orange" taglines */
+  --color-brand-blue:   #51A2FF;
+  --color-brand-indigo: #625FFF;   /* primary brand color — "indigo-500" */
+  --color-brand-red:    #FF2056;
+  --color-brand-green:  #22863A;
+
+  /* ── Indigo scale (used throughout UI) ── */
+  --color-indigo-50:   #EEF2FF;
+  --color-indigo-100:  #E0E7FF;
+  --color-indigo-400:  #818CF8;
+  --color-indigo-500:  #625FFF;    /* primary CTA */
+  --color-indigo-600:  #4C3AED;    /* primary CTA hover / border */
+
+  /* ── Stone (neutral) scale — Tailwind stone family ── */
+  --color-stone-0:    #FFFFFF;
+  --color-stone-50:   #FAFAF9;     /* body bg */
+  --color-stone-100:  #F5F5F4;
+  --color-stone-200:  #E7E5E4;     /* borders / dividers */
+  --color-stone-300:  #D6D3D1;
+  --color-stone-400:  #A8A29E;     /* muted text */
+  --color-stone-500:  #78716C;     /* secondary text */
+  --color-stone-600:  #57534E;
+  --color-stone-700:  #44403C;     /* dark button bg */
+  --color-stone-800:  #1C1917;     /* primary text */
+  --color-stone-900:  #0C0A09;
+  --color-stone-950:  #000000;
+  --color-stone-1k:   #000000;
+
+  /* ── Semantic accent badges (hand-picked in components) ── */
+  --color-badge-indigo-bg:   #7E86FB;
+  --color-badge-indigo-bdr:  #4C3AED;
+  --color-badge-green-bg:    #ABE435;
+  --color-badge-green-bdr:   #6FA417;
+  --color-badge-red-bg:      #F16E81;
+  --color-badge-red-bdr:     #D91A45;
+  --color-badge-orange-bg:   #FFF7ED; /* orange-50 */
+  --color-badge-orange-bdr:  #FED7AA; /* orange-200 */
+
+  /* ── Semantic tokens ── */
+  --fg-primary:    var(--color-stone-800);
+  --fg-secondary:  var(--color-stone-500);
+  --fg-muted:      var(--color-stone-400);
+  --fg-inverse:    var(--color-stone-50);
+  --fg-accent:     var(--color-indigo-500);
+
+  --bg-page:       var(--color-stone-50);
+  --bg-surface:    var(--color-stone-0);
+  --bg-surface-2:  var(--color-stone-100);
+  --border-default:var(--color-stone-200);
+  --border-strong: var(--color-stone-300);
+
+  /* ── Typography ── */
+  --font-sans:    "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-mono:    "Geist Mono", ui-monospace, monospace;
+  --font-cooper:  "cooperLtBT", "Georgia", serif;           /* display serif */
+  --font-datatype:"Datatype", ui-monospace, monospace;       /* numeric mono */
+
+  /* Base type sizes — pulled from components */
+  --text-display-xl: 80px;   /* hero on desktop: font-cooper text-[80px] */
+  --text-display-lg: 40px;   /* section headings: text-[40px] */
+  --text-display-sm: 28px;   /* mobile section headings: text-[28px] */
+  --text-h1:         24px;   /* modal titles: text-2xl */
+  --text-h2:         20px;
+  --text-body-lg:    18px;
+  --text-body:       16px;
+  --text-sm:         14px;
+  --text-xs:         12px;
+  --text-2xs:        10px;   /* tiny label chips */
+
+  /* Radii */
+  --radius-xs: 6px;
+  --radius-sm: 8px;   /* sm buttons */
+  --radius-md: 10px;  /* --radius-brand */
+  --radius-lg: 12px;  /* md/lg buttons, inputs */
+  --radius-xl: 16px;
+  --radius-2xl: 20px; /* cards */
+  --radius-brand: 10px;
+
+  /* Shadows */
+  --shadow-input:        0 0 0 3px rgba(98, 95, 255, 0.08);   /* indigo focus ring */
+  --shadow-input-hover:  0 0 0 3px rgba(0, 0, 0, 0.03);
+  --shadow-10: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  --shadow-2xl: 0 25px 50px -12px rgba(0,0,0,0.25);
+
+  /* Spacing scale (tailwind-aligned) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --space-40: 160px;
+}
+
+/* ── Base element styles ── */
+body {
+  margin: 0;
+  color: var(--fg-primary);
+  background-color: var(--bg-page);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Semantic type classes */
+.ds-display {
+  font-family: var(--font-cooper);
+  font-size: var(--text-display-xl);
+  line-height: 1.1;
+  color: var(--fg-primary);
+  letter-spacing: -0.01em;
+}
+.ds-h1 {
+  font-family: var(--font-cooper);
+  font-size: var(--text-display-lg);
+  line-height: 1.2;
+  color: var(--fg-primary);
+}
+.ds-h2 {
+  font-family: var(--font-cooper);
+  font-size: var(--text-display-sm);
+  line-height: 1.25;
+  color: var(--fg-primary);
+}
+.ds-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--fg-accent);
+}
+.ds-eyebrow--orange { color: var(--color-brand-orange); }
+.ds-body {
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: 1.5625;
+  color: var(--fg-secondary);
+}
+.ds-body-sm {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  line-height: 1.4;
+  color: var(--fg-secondary);
+}
+.ds-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--fg-primary);
+}
+.ds-micro {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--fg-muted);
+}
+.ds-mono-num {
+  font-family: var(--font-datatype), var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+.ds-serif-italic {
+  font-family: var(--font-cooper);
+  font-style: italic;
+}
+
+/* Utility */
+.font-cooper   { font-family: var(--font-cooper); }
+.font-datatype { font-family: var(--font-datatype); }
+.font-mono-ds  { font-family: var(--font-mono); }
